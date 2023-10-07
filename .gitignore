@@ -9,3 +9,6 @@
 /FizzBuzzTest/obj
 .vscode/
 .idea
+
+/coveragereport
+TestResults
