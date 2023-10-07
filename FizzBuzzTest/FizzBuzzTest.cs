@@ -17,7 +17,7 @@ namespace FizzBuzzTest
         [InlineData(7, "Whizz")]
         [InlineData(14, "Whizz")]
         [InlineData(28, "Whizz")]
-        public void Should_return_Buzz_given_number_is_single_of_special_number(int inputNumber, string expectedCallOut)
+        public void Should_return_Buzz_given_number_is_multiples_of_single_special_number(int inputNumber, string expectedCallOut)
         {
             // given
             int number = inputNumber;
@@ -35,6 +35,22 @@ namespace FizzBuzzTest
         [InlineData(105, "FizzBuzzWhizz")]
         [InlineData(35, "BuzzWhizz")]
         public void Should_return_phrase_combination_given_number_is_multiples_of_special_numbers(int inputNumber, string expectedCallOut)
+        {
+            // given
+            int number = inputNumber;
+
+            // when
+            string callOut = FizzBuzz.FizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(expectedCallOut, callOut);
+        }
+
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(4, "4")]
+        public void Should_return_raw_number_given_number_is_not_multiples_of_any_special_number(int inputNumber, string expectedCallOut)
         {
             // given
             int number = inputNumber;
