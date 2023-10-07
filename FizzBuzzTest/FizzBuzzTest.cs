@@ -17,7 +17,7 @@ namespace FizzBuzzTest
         [InlineData(7, "Whizz")]
         [InlineData(14, "Whizz")]
         [InlineData(28, "Whizz")]
-        public void Should_return_Buzz_given_number_is_multiple_of_single_of_special_number(int inputNumber, string expectedCallOut)
+        public void Should_return_Buzz_given_number_is_single_of_special_number(int inputNumber, string expectedCallOut)
         {
             // given
             int number = inputNumber;
