@@ -28,5 +28,22 @@ namespace FizzBuzzTest
             //then
             Assert.Equal(expectedCallOut, callOut);
         }
+
+        [Theory]
+        [InlineData(15, "FizzBuzz")]
+        [InlineData(21, "FizzWhizz")]
+        [InlineData(105, "FizzBuzzWhizz")]
+        [InlineData(35, "BuzzWhizz")]
+        public void Should_return_phrase_combination_given_number_is_multiples_of_special_numbers(int inputNumber, string expectedCallOut)
+        {
+            // given
+            int number = inputNumber;
+
+            // when
+            string callOut = FizzBuzz.FizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(expectedCallOut, callOut);
+        }
     }
 }
